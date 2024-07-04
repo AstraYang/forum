@@ -180,8 +180,6 @@ public class StickController {
 	/**
 	 * 收藏
 	 */
-
-
 	@GetMapping("/addStarStick/{uID}/{mID}")
 	public R addStarStick(@PathVariable("uID")Integer uID,@PathVariable("mID")Integer mID){
 		System.err.println("---添加收藏----");

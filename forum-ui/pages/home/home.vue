@@ -11,7 +11,7 @@
 			<image src="../../static/img/我的帖子.png"></image><text>我的帖子</text>
 		</view>
 		
-		<view class="h-list" >
+		<view class="h-list" @click="myStars(userData.uid)">
 			<image src="../../static/img/收藏.png"></image><text>我的收藏</text>
 		</view>
 		
@@ -136,6 +136,11 @@
 			addStick(){
 				uni.navigateTo({
 					url: "/pages/stick/addStick"
+				})
+			},
+			myStars(uID){
+				uni.navigateTo({
+					url: "/pages/user/stars?uID="+uID
 				})
 			}
 		}

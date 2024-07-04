@@ -12,6 +12,7 @@
 					:post="stick" 
 					:httpPath="httpPath"
 					@navigateToPost="mainStick"
+					@toggleStar="addStar"
 					@toggleLike="addLike"
 				/>
 			</view>
@@ -90,8 +91,31 @@
 						}
 					}
 				})
+			},
+			addStar(mID) {
+				let uID = uni.getStorageSync('id');
+							uni.request({
+								url: `http://localhost/stick/addStarStick/${uID}/${mID}`,
+								method: 'GET',
+								success: (result) => {
+									if (result.statusCode === 200) {
+										uni.showToast({
+											title: '收藏成功',
+											icon: 'success',
+											duration: 2000
+										});
+									}
+								},
+								fail: (error) => {
+									console.error('收藏失败', error);
+									uni.showToast({
+										title: '收藏失败',
+										icon: 'none',
+										duration: 2000
+									});
+								}
+							});
 			}
-
 		}
 	}
 </script>
