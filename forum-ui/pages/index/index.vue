@@ -94,6 +94,17 @@
 			},
 			addStar(mID) {
 				let uID = uni.getStorageSync('id');
+				uni.request({
+					url: `http://localhost/stick/checkStarred/${mID}/${uID}`,
+					method: 'GET',
+					success: (response) => {
+						if(response.data.data){
+							uni.showToast({
+								title: '您已经收藏了该帖子',
+								icon: 'none',
+								duration: 2000
+							});
+						}else{
 							uni.request({
 								url: `http://localhost/stick/addStarStick/${uID}/${mID}`,
 								method: 'GET',
@@ -115,6 +126,9 @@
 									});
 								}
 							});
+						}
+					}
+				});
 			}
 		}
 	}
