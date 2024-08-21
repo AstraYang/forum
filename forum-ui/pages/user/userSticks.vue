@@ -56,6 +56,20 @@ export default {
         }
       })
     },
+    deleteStick(mid) {
+      console.log("删除帖子，mid:", mid);
+      uni.request({
+        url: "http://localhost/stick/delStickBymID/?mID=" + mid,
+        method: 'POST',
+        success: (res) => {
+          console.log("帖子删除成功", res);
+          this.getUserPosts();
+        },
+        fail: (err) => {
+          console.error("帖子删除失败", err);
+        }
+      })
+    },
     mainStick(mid) {
       console.log(mid);
       uni.navigateTo({

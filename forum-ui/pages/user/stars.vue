@@ -69,7 +69,26 @@ export default {
         }
       })
     },
-	}
+    // 删除帖子
+     deleteStick(mid) {
+          // 调用后端接口删除帖子
+          console.log("删除帖子，mid:", mid);
+          uni.request({
+            url: "http://localhost/stick/delStickBymID/?mID=" + mid,
+            method: 'POST',
+            success: (res) => {
+              console.log("帖子删除成功", res);
+              // 刷新帖子列表
+              this.getUserPosts();
+            },
+            fail: (err) => {
+              console.error("帖子删除失败", err);
+              // 处理失败情况
+              // 可以在界面上给出提示或者进行其他处理
+            }
+          })
+        }
+      }
 };  
 </script>
 

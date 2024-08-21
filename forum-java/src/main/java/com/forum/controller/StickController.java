@@ -167,6 +167,14 @@ public class StickController {
 		return R.ok(stickService.updateById(mainStick));
 	}
 
+	/**
+	 * 删除帖子（只删除数据库信息
+	 */
+	@PostMapping("/delStickBymID")
+	public R delStickBymID(@RequestParam("mID")Integer mID){
+		return R.ok(stickService.removeById(mID));
+	}
+
 
 
 	/**
@@ -185,7 +193,7 @@ public class StickController {
 		System.err.println("---判断收藏----");
 		return R.ok(stickService.checkStarred(mID,uID));
 	}
-	@GetMapping("/addStarStick/{uID}/{mID}")
+		@GetMapping("/addStarStick/{uID}/{mID}")
 	public R addStarStick(@PathVariable("uID")Integer uID,@PathVariable("mID")Integer mID){
 		System.err.println("---添加收藏----");
 
