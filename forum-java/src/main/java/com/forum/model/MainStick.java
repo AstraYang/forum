@@ -17,64 +17,44 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @TableName(value = "mainStick")
 public class MainStick {
-	
-	/**
-	 * 主贴ID
-	 */
+	  //主贴ID
     @TableId(value = "mID", type = IdType.AUTO)
 	private Integer mID;
-	
-	/**
-	 * 社区ID
-	 */
+
+	 //社区ID
     @TableField(value = "cID")
 	private Integer cID;
     
-    /**
-	 * 用户ID
-	 */
+
+	 //用户ID
     @TableField(value = "uID")
 	private Integer uID;
 
-    /**
-	 * 主贴标题
-	 */
+	 // 主贴标题
     @TableField(value = "mTitle")
 	private String mTitle;
 
-    /**
-	 * 主贴内容
-	 */
+	 // 主贴内容
     @TableField(value = "mContent")
 	private String mContent;
 
-    /**
-	 * 主帖发布时间
-	 */
+	 //主帖发布时间
     @TableField(value = "mCreateTime")
 	private String mCreateTime;
 
-    /**
-	 * 主贴点击次数
-	 */
+	 //主贴点击次数
     @TableField(value = "mClicks")
 	private Integer mClicks;
 
-    /**
-	 * 主贴回复次数
-	 */
+	 //主贴回复次数
     @TableField(value = "mReplies")
 	private Integer mReplies;
 
-    /**
-	 * 主贴点赞次数
-	 */
+	 //主贴点赞次数
     @TableField(value = "mLike")
 	private Integer mLike;
 
-    /**
-	 * 主贴收藏次数
-	 */
+	 //主贴收藏次数
     @TableField(value = "mStars")
 	private Integer mStars;
 }

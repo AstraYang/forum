@@ -6,7 +6,6 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 
@@ -56,25 +55,4 @@ public class FileMethod {
         }
         return respFileName;
     }
-    /**
-     * 上传图片到前端
-     */
-//    @SneakyThrows
-//    public ResponseEntity<String> setImage(MultipartFile multipartFile){
-//        //将MultipartFile转换为字节数组
-//        byte[] imageBytes = multipartFile.getBytes();
-//        //创建RestTemplate实例
-//        RestTemplate restTemplate = new RestTemplate();
-//
-//        //创建Httpheaders 设置ContentType为Multipart/form-data
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-//        //将字节数组作为请求体
-//        HttpEntity<byte[]> httpEntity = new HttpEntity<>(imageBytes,headers);
-//
-//        //发送响应
-////        ResponseEntity<String> responseEntity = restTemplate.getForEntity("",r,);
-//
-//    }
-
 }

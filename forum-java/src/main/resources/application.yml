@@ -1,8 +1,9 @@
+#  设置应用服务器监听的端口号为80。
 server:
   port: 80
   servlet:
     context-path: /
-
+#  使用mysql数据库
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -10,11 +11,12 @@ spring:
     url: jdbc:mysql://localhost:3306/forumdb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 121109
+#    设置文件上传配置，设置单个文件上传的最大100MB。设置整个请求的最大500MB，
   servlet:
     multipart:
       max-file-size: 100MB
       max-request-size: 500MB
-
+#MyBatis Plus配置
 mybatis-plus:
   global-config:
     db-config:
@@ -23,7 +25,7 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     auto-mapping-behavior: full
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:mapper/*.xml
+#  mapper-locations: classpath:mapper/*.xml
 
 
   

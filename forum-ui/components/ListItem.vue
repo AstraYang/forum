@@ -3,7 +3,7 @@
     <uni-card>
       <view class="card-content">
         <text class="mtitle">{{ post.mtitle }}</text>
-       <view class="delete-btn" @click="deleteStick(post.mid)">
+        <view class="delete-btn" @click="deleteStick(post.mid)">
           <image src="../static/icon/删除.png"></image>
         </view>
         <view class="view-details" @click="mainStick(post.mid)">
@@ -19,7 +19,7 @@ export default {
   props: {
     post: Object
   },
-   methods: {
+  methods: {
     deleteStick(mid) {
       this.$emit('delete', mid);
     },

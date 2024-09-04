@@ -38,7 +38,7 @@ public class User {
 	private Integer uSex;
 	
 	/**
-   	 * 用户性别
+   	 * 用户等级
    	 */
     @TableField(value = "grade")
 	private Integer grade;

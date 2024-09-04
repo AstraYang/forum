@@ -1,7 +1,6 @@
 package com.forum.controller;
 
 import com.baomidou.mybatisplus.extension.api.R;
-import com.forum.mapper.ReplyMapper;
 import com.forum.model.Reply;
 import com.forum.service.ReplyService;
 import com.forum.service.ReplyVoService;

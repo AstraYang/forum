@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- *管理类
+ *admin类
  */
 @Data
 @NoArgsConstructor
